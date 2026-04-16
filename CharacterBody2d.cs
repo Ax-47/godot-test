@@ -18,7 +18,7 @@ public partial class CharacterBody2d : CharacterBody2D
         else
         {
             velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
-            velocity.Y = Mathf.MoveToward(Velocity.X, 0, Speed);
+            velocity.Y = Mathf.MoveToward(Velocity.Y, 0, Speed);
         }
 
         Velocity = velocity;
