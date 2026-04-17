@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://car75gir1uwr6"]
 
-[ext_resource type="Script" uid="uid://6tlm10uwbqfi" path="res://CharacterBody2d.cs" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://bw3oj2hrg605c" path="res://src/Character/scripts/Models/Character/Character.cs" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://cvgyq4ptnt27u" path="res://src/Character/scripts/Models/System/PrintInput.cs" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dy4tt8oexjlgs" path="res://icon.svg" id="1_wtcfe"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0e48y"]
@@ -19,6 +20,7 @@ size = Vector2(83.38203, 4.02625)
 size = Vector2(0.9855294, 0.9555019)
 
 [node name="Node2D" type="Node2D" unique_id=589755124]
+script = ExtResource("1_epypp")
 
 [node name="Node2D3" type="StaticBody2D" parent="." unique_id=1459835574]
 position = Vector2(1682, 148)
@@ -45,6 +47,7 @@ position = Vector2(-1, 4)
 shape = SubResource("RectangleShape2D_epypp")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1961752564]
+position = Vector2(3.9999995, -25.999996)
 rotation = 3.1415927
 scale = Vector2(0.16478628, -0.16969964)
 script = ExtResource("1_0e48y")
@@ -57,6 +60,7 @@ mesh = SubResource("QuadMesh_0e48y")
 texture = ExtResource("1_wtcfe")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=2029359940]
+position = Vector2(-30.342388, 642.3113)
 scale = Vector2(0.9999999, 0.99999994)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=224594443]
@@ -64,16 +68,21 @@ position = Vector2(3.034207, 580.4371)
 scale = Vector2(8.538834, 121.47761)
 shape = SubResource("RectangleShape2D_wtcfe")
 
-[node name="Node2D" type="StaticBody2D" parent="CharacterBody2D" unique_id=1112775568]
+[node name="Weapon" type="Node2D" parent="CharacterBody2D" unique_id=1807550474]
+position = Vector2(-6.0684686, -2.2994273e-05)
 scale = Vector2(0.9999999, 0.99999994)
 
-[node name="waepon" type="MeshInstance2D" parent="CharacterBody2D/Node2D" unique_id=81898130]
-position = Vector2(-1007.3655, 618.74023)
+[node name="weapon" type="StaticBody2D" parent="CharacterBody2D/Weapon" unique_id=324365790]
+position = Vector2(-970.9547, 595.16907)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="waepon" type="MeshInstance2D" parent="CharacterBody2D/Weapon/weapon" unique_id=81898130]
+position = Vector2(6.0684204, -5.8927593)
 scale = Vector2(782.0117, 234.35338)
 mesh = SubResource("BoxMesh_epypp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Node2D" unique_id=844858170]
-position = Vector2(-1019.50244, 624.633)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Weapon/weapon" unique_id=844858170]
+position = Vector2(-12.137085, 0)
 scale = Vector2(782.0117, 234.35326)
 shape = SubResource("RectangleShape2D_0e48y")
 
