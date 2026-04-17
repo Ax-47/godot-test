@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://car75gir1uwr6"]
 
-[ext_resource type="Script" uid="uid://bw3oj2hrg605c" path="res://src/Character/scripts/Models/Character/Character.cs" id="1_0e48y"]
-[ext_resource type="Script" uid="uid://cvgyq4ptnt27u" path="res://src/Character/scripts/Models/System/PrintInput.cs" id="1_epypp"]
+[ext_resource type="Script" uid="uid://cvgyq4ptnt27u" path="res://src/Models/System/PrintInput.cs" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dy4tt8oexjlgs" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://bw3oj2hrg605c" path="res://src/Models/Character/Character.cs" id="2_0hol4"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0e48y"]
 
@@ -50,7 +50,7 @@ shape = SubResource("RectangleShape2D_epypp")
 position = Vector2(3.9999995, -25.999996)
 rotation = 3.1415927
 scale = Vector2(0.16478628, -0.16969964)
-script = ExtResource("1_0e48y")
+script = ExtResource("2_0hol4")
 
 [node name="Sprite2D" type="MeshInstance2D" parent="CharacterBody2D" unique_id=268863713]
 position = Vector2(-14.545086, 598.8447)
